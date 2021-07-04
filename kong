@@ -3806,17 +3806,7 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
     c.Anchored = false
 end)
 
-local c = game.Players.LocalPlayer.Character:FindFirstChild("MeshPartAccessory").Handle
-c.AccessoryWeld:Destroy()
-c.Anchored = false
-local cRot = 0.1
-game:GetService("RunService").RenderStepped:Connect(function(dt)
-    cRot = cRot + -12*dt
-    c.Anchored = true
-    c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,-2.8,-.4) * CFrame.Angles(math.rad(-90), 0, -cRot)
-    c.Velocity = Vector3.new(0,0,0)
-    c.Anchored = false
-end)
+
 
 
 
